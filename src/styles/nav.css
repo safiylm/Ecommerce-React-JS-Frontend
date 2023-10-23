@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(35, 30, 30);
+    color: white;
+    height: 50px;
+    width: 100%;
+  }
+  

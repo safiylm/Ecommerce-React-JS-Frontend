@@ -1,0 +1,18 @@
+.div-form-bon-de-reduction {
+    display: flex;
+    margin: 20px;
+}
+.div-form-bon-de-reduction button{
+    flex: 20%;
+    border: 0.2px solid gray;
+    padding : 10px 20px;
+    background-color:  gray;
+    color:white;
+}
+
+.div-form-bon-de-reduction input{
+    flex: 80%;
+
+    border: 0.2px solid gray;
+    padding : 10px 20px;
+}

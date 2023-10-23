@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.panier-main {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left {
+  flex: 60%;
+  min-width: 500px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right {
+  flex: 40%;
+  max-width: 500px;
+  min-width: 500px;
+
+}
+
+.right,
+.left {
+  margin: 20px;
+}
+.left  .div-mon-panier,  
+.right .div-form-bon-de-reduction
+{
+  margin:10px;
+  background-color: white;
+  padding: 10px;
+
+}
+
+@media screen and (max-width: 1000px) {
+  .panier-main {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .left {
+    flex: 100%;
+    max-width: 100%;
+    min-width: 300px;
+
   }
+  
+  .right {
+    flex: 100%;
+    max-width: 100%;
+    min-width: 300px;
+  }
+  .right,
+.left {
+  margin: 5px;
+}
+
 }

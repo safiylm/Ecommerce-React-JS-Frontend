@@ -1,0 +1,10 @@
+
+.info-reduction {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    background-color: rgb(158, 14, 14);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }

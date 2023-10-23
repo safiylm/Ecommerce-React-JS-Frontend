@@ -1,0 +1,16 @@
+
+.div-info-livraison-1, .div-info-livraison-2{
+
+    font-weight: 100;
+    font-size: 13px;
+    margin:10px;
+    background-color: white;
+    padding: 10px 30px;
+  
+}
+
+.div-info-livraison-1{
+    background-color: black !important;
+    color:white;
+  
+}

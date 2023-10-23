@@ -1,0 +1,42 @@
+.div-total-paiement{
+    margin:10px;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.div-total-paiement h4{
+    border-bottom: 0.2px solid gray;
+    padding-bottom: 10px;
+}
+
+.somme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.livraison-x{
+    padding: 10px 0;
+
+}
+
+.livraison-x select{
+    margin: 10px 0;
+    padding: 10px ;
+    background-color: white;
+    border: 0.2px solid gray;
+    width: 100%;
+
+}
+
+
+#paiement-btn{
+    border:none;
+    padding: 15px;
+    background-color: rgb(94, 149, 127);
+    color:white;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+}

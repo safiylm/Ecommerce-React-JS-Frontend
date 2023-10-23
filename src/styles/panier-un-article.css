@@ -1,0 +1,53 @@
+.div-un-article {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 0.2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.div-un-article img {
+    height: 250px;
+    width: auto;
+}
+
+.div-un-article .article-info {
+     margin-left: 15px; 
+}
+
+.div-un-article div p {
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(82, 81, 81);
+}
+
+
+.div-un-article div select {
+    padding: 10px;
+    background-color: white;
+    border: 0.2px solid gray;
+    width: auto;
+}
+
+
+
+.div-un-article div button {
+    border: 0.3px solid gray;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: white;
+    color: rgb(82, 81, 81);
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.div-taille,
+.div-quantite {
+    color: rgb(82, 81, 81);
+    margin: 8px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
