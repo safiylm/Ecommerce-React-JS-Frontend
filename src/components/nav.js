@@ -1,11 +1,25 @@
 import '../styles/nav.css'
+import { Outlet, Link } from "react-router-dom";
 
-function Nav() {
+
+const Nav = () => {
   return (
-    <nav>
-         ASOSO
-    </nav>
-  );
-}
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">ASOSO</Link>
+          </li>
+          <li>
+            <Link to="/produit">Produit </Link>
+          </li>
+        
+        </ul>
+      </nav>
+
+      <Outlet />
+    </>
+  )
+};
 
 export default Nav;

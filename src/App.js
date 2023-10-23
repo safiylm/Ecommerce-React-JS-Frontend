@@ -1,30 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Nav from './components/nav.js'
-import PanierListe from './components/panier/panier-liste.js'
-import ReductionBarreHorizontale from './components/panier/reduction-barre-horizontale'
-import PanierTotale from './components/panier/panier-totale.js'
-import PanierFormBonDeReduction from './components/panier/panier-form-bon-de-reduction'
-import PanierInfoLivraison from './components/panier/panier-info-livraison'
+import Panier from './components/panier/index'
+import Produit from './components/produit/index'
+import Nav from './components/nav'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      < Nav />
-      <ReductionBarreHorizontale />
-      <div className="panier-main">
-        <div className="left">
-          <PanierListe />
-          <PanierInfoLivraison/>
-        </div>
-        <div className="right">
-          <PanierTotale />
-          <PanierFormBonDeReduction />
 
-        </div>
-      </div>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={< Nav />}>
+          <Route index element={<Panier />} />
+          <Route path="panier" element={<Panier />} />
+          <Route path="produit" element={<Produit />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

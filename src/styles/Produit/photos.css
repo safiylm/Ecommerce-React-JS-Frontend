@@ -1,0 +1,27 @@
+.divPhotos{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+     justify-content: center;
+   
+
+}
+
+.listePhotoVertical{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    overflow: scroll;
+}
+
+.listePhotoVertical img{
+    width: 100px;
+    height: 150px;
+    padding: 7px;
+}
+
+#photoViewer{
+    width: 500px;
+    height: 700px;
+    object-fit: contain;
+}
