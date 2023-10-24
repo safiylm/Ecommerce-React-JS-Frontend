@@ -17,11 +17,14 @@
 .listePhotoVertical img{
     width: 100px;
     height: 150px;
-    padding: 7px;
 }
 
 #photoViewer{
     width: 500px;
     height: 700px;
     object-fit: contain;
+}
+
+.listePhotoVertical img:hover{
+    border: 1px solid black ;
 }

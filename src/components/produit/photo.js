@@ -1,6 +1,10 @@
 import '../../styles/Produit/photos.css'
 
 
+function ClickImage(e){
+   // alert(e)
+    document.getElementById("photoViewer").src=e;
+}
 
 function Photos() {
     const url_image = [
@@ -18,7 +22,7 @@ function Photos() {
             <div className='listePhotoVertical'>
 
                 {url_image.map((url, index) => (
-                    <img key={`${url}-${index}`} src={url} ></img>
+                    <img key={`${url}-${index}`} src={url} onClick={() => ClickImage(url)} ></img>
                 ))}
             </div>
 

@@ -3,7 +3,9 @@
     height: 50px;
     line-height: 50px;
     width: 100%;
-    background-color: rgb(158, 14, 14);
+    /* background-color: rgb(158, 14, 14); */
+    background-color: rgb(94, 149, 127);
+
     color: white;
     text-align: center;
     font-weight: bold;
