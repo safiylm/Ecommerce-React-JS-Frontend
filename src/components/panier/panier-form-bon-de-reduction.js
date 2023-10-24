@@ -1,4 +1,4 @@
-import "../../styles/panier-form-bon-de-reduction.css"
+import "../../styles/Panier/panier-form-bon-de-reduction.css"
 
 function PanierFormBonDeReduction() {
     return (

@@ -1,4 +1,4 @@
-import '../../styles/panier-totale.css'
+import '../../styles/Panier/panier-totale.css'
 
 function PanierTotale() {
     return (

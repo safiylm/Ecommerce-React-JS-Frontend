@@ -1,4 +1,4 @@
-import '../../styles/panier-liste.css'
+import '../../styles/Panier/panier-liste.css'
 import UnArticle from '../../components/panier/panier-un-article'
 
 function PanierListe() {

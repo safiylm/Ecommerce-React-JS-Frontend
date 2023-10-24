@@ -1,4 +1,4 @@
-import '../../styles/panier-un-article.css'
+import '../../styles/Panier/panier-un-article.css'
 
 function UnArticle() {
     return (

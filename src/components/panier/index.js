@@ -1,5 +1,4 @@
 import '../../App.css';
-import Nav from '../nav.js'
 import PanierListe from './panier-liste.js'
 import ReductionBarreHorizontale from './reduction-barre-horizontale.js'
 import PanierTotale from './panier-totale.js'

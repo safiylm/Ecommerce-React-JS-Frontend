@@ -1,4 +1,4 @@
-import '../../styles/panier-info-livraison.css'
+import '../../styles/Panier/panier-info-livraison.css'
 
 function PanierInfoLivraison() {
     return (

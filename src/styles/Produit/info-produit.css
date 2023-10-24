@@ -1,0 +1,93 @@
+body{
+    background-color: white;
+}
+
+div-info-produit1{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.div-info-produit2{
+    margin-left: 70px;
+    max-width: 600px;
+}
+
+
+.div-info-livraison-1, .div-info-livraison-2{
+    margin-top:20px;
+    margin-left: 70px !important;
+    margin-right: 0;
+    max-width: 500px;
+    border: 0.2px solid black;
+
+}
+
+
+.titreProduit2{
+    font-weight: 500;
+}
+
+
+.prix{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+
+.couleur{
+    font-size: 15px;
+}
+
+
+.div-taille select {
+   
+    padding: 10px;
+    background-color: white;
+    border: 0.2px solid gray;
+    width: 100%;
+    font-size:18px;
+}
+
+
+.div-add-panier-herat{
+    width: 100%;
+    display: flex;
+}
+
+#btn-panier{
+    flex:70%;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border:none;
+    font-size:16px;
+
+}
+
+#btn-heart{
+    flex:30%;
+    padding: 10px;
+    background-color: white;
+    border: 0.2px solid black;
+    font-size:16px;
+
+}
+
+.btn-infosupp-matiere, .btn-infosupp-taille, .btn-infosupp-detail{
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 0.3px solid gray;
+    padding: 20px;
+    margin-left: 70px;
+    width: 600px;
+    background-color: white;
+}
+
+.div-infosupp-matiere, .div-infosupp-taille, .div-infosupp-detail{
+    margin-left: 70px;
+    width: 600px;
+}
