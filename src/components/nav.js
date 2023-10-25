@@ -6,17 +6,9 @@ const Nav = () => {
   return (
     <>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">ASOSO</Link>
-          </li>
-          <li>
-            <Link to="/produit">Produit </Link>
-          </li>
-        
-        </ul>
+        <Link to="/produit">Produit </Link>
+        <Link to="/">Panier</Link>
       </nav>
-
       <Outlet />
     </>
   )
