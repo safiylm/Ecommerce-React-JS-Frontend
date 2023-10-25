@@ -1,13 +1,13 @@
 import '../../styles/Panier/panier-totale.css'
 
-function PanierTotale() {
+function PanierTotale({numberArticle,setNumberArticle}) {
     return (
 
         <div className="div-total-paiement">
             <h4>TOTAL</h4>
             <div className="somme">
                 <div>Sous-total</div>
-                <div>61,98$</div>
+                <div>{numberArticle * 49.99} $</div>
             </div>
             <div className="livraison-x">
                 <div>Livraison</div>
