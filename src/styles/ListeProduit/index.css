@@ -1,0 +1,19 @@
+.div-liste-produits{
+    display: flex;
+    justify-content: center;
+
+}
+.div-un-produit{
+    margin: 15px;
+}
+
+.div-un-produit a img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.div-un-produit p{
+    text-align: center;
+    color:black;
+}
