@@ -4,12 +4,23 @@ import { Outlet, Link } from "react-router-dom";
 
 function displayNavFemme() {
   document.getElementById("nav-femme-supplementaire").style.display = 'block'
+  document.getElementById("nav-homme-supplementaire").style.display = 'none'
+  document.getElementById("nav-enfant-supplementaire").style.display = 'none'
+
 }
 function displayNavHomme() {
   document.getElementById("nav-homme-supplementaire").style.display = 'block'
+  document.getElementById("nav-enfant-supplementaire").style.display = 'none'
+  document.getElementById("nav-femme-supplementaire").style.display = 'none'
+
+
 }
 function displayNavEnfant() {
   document.getElementById("nav-enfant-supplementaire").style.display = 'block'
+  document.getElementById("nav-homme-supplementaire").style.display = 'none'
+  document.getElementById("nav-femme-supplementaire").style.display = 'none'
+
+
 }
 
 
@@ -49,7 +60,7 @@ const Nav = () => {
         </div>
       </nav>
       <div id='nav-femme-supplementaire' onMouseLeave={hideNavFemme} >
-        <a>Nouveautés</a>
+        <a>Nouveautés femmes</a>
         <a>Vêtements</a>
         <a>Chaussures</a>
         <a>Accessoires</a>
@@ -57,14 +68,14 @@ const Nav = () => {
       </div>
 
       <div id='nav-homme-supplementaire' onMouseLeave={hideNavHomme} >
-        <a>Nouveautés</a>
+        <a>Nouveautés hommes</a>
         <a>Vêtements</a>
         <a>Chaussures</a>
         <a>Accessoires</a>
       </div>
 
       <div id='nav-enfant-supplementaire' onMouseLeave={hideNavEnfant} >
-        <a>Nouveautés</a>
+        <a>Nouveautés enfants</a>
         <a>Vêtements</a>
         <a>Chaussures</a>
         <a>Accessoires</a>
