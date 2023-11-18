@@ -3,6 +3,8 @@ import Produit from './components/produit/index'
 import Nav from './components/nav'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ListeProduit from './components/liste-produit';
+import Search from './components/search/search';
+import Connexion from './components/auth/connexion';
 
 function App() {
   return (
@@ -13,6 +15,12 @@ function App() {
           <Route index element={<ListeProduit />} />
           <Route path="panier" element={<Panier />} />
           <Route path="produit" element={<Produit />} />
+          <Route path="femme" element={<ListeProduit />} />
+          <Route path="homme" element={<ListeProduit />} />
+          <Route path="enfant" element={<ListeProduit />} />
+
+          <Route path="search" element={<Search />} />
+          <Route path="connexion" element={<Connexion />} />
         </Route>
       </Routes>
     </BrowserRouter>
