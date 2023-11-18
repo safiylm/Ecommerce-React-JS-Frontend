@@ -9,9 +9,52 @@ nav {
   width: 100%;
   padding-right:20px;
   box-sizing: border-box;
+  border-bottom: 0.3px solid gray;
+
 }
 
 nav div a {
   color: black;
   margin-left: 20px;
+}
+
+
+#nav-femme:hover{
+  text-decoration: underline;
+}
+
+#nav-homme:hover{
+  text-decoration: underline;
+}
+
+#nav-enfant:hover{
+  text-decoration: underline;
+}
+
+#nav-femme-supplementaire, #nav-homme-supplementaire, #nav-enfant-supplementaire{
+  display:none;
+  height: auto;
+  width: 100%;
+  border-bottom: 0.3px solid gray;
+  padding: 20px 0;
+}
+
+#nav-femme-supplementaire a, 
+#nav-homme-supplementaire a,
+#nav-enfant-supplementaire a
+{
+  display: block;
+  text-decoration: none;
+  color:black;
+  padding: 6px;;
+  padding-left:20px;
+
+}
+
+#nav-femme-supplementaire a:hover, 
+#nav-homme-supplementaire a:hover,
+#nav-enfant-supplementaire a:hover
+{
+  color:rgb(122, 118, 118);
+
 }

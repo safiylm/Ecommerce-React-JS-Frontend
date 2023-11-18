@@ -2,14 +2,36 @@ import '../styles/nav.css'
 import { Outlet, Link } from "react-router-dom";
 
 
+function displayNavFemme() {
+  document.getElementById("nav-femme-supplementaire").style.display = 'block'
+}
+function displayNavHomme() {
+  document.getElementById("nav-homme-supplementaire").style.display = 'block'
+}
+function displayNavEnfant() {
+  document.getElementById("nav-enfant-supplementaire").style.display = 'block'
+}
+
+
+function hideNavFemme() {
+  document.getElementById("nav-femme-supplementaire").style.display = 'none'
+}
+function hideNavHomme() {
+  document.getElementById("nav-homme-supplementaire").style.display = 'none'
+}
+function hideNavEnfant() {
+  document.getElementById("nav-enfant-supplementaire").style.display = 'none'
+}
+
 const Nav = () => {
+
   return (
     <>
       <nav>
         <div>
-          <Link to="/femme">Femme</Link>
-          <Link to="/homme">Homme</Link>
-          <Link to="/enfant">Enfant</Link>
+          <Link id="nav-femme" to="/femme" onMouseOver={displayNavFemme} >Femme</Link>
+          <Link id="nav-homme" to="/homme" onMouseOver={displayNavHomme} >Homme</Link>
+          <Link id="nav-enfant" to="/enfant" onMouseOver={displayNavEnfant} >Enfant</Link>
         </div>
         <div>
           <Link to="/">BSKA</Link>
@@ -26,6 +48,27 @@ const Nav = () => {
           </svg></Link>
         </div>
       </nav>
+      <div id='nav-femme-supplementaire' onMouseLeave={hideNavFemme} >
+        <a>Nouveautés</a>
+        <a>Vêtements</a>
+        <a>Chaussures</a>
+        <a>Accessoires</a>
+
+      </div>
+
+      <div id='nav-homme-supplementaire' onMouseLeave={hideNavHomme} >
+        <a>Nouveautés</a>
+        <a>Vêtements</a>
+        <a>Chaussures</a>
+        <a>Accessoires</a>
+      </div>
+
+      <div id='nav-enfant-supplementaire' onMouseLeave={hideNavEnfant} >
+        <a>Nouveautés</a>
+        <a>Vêtements</a>
+        <a>Chaussures</a>
+        <a>Accessoires</a>
+      </div>
       <Outlet />
     </>
   )
