@@ -1,0 +1,51 @@
+#page-connexion{
+    background : linear-gradient(90deg, #bb33dc 0%, #60d8dd 100%);
+    width: 100%;
+    padding: 100px 0;
+    margin: 0;
+    height:80vh;
+}
+
+#div-connexion{
+    display: flex;
+    flex-direction: column;
+    align-items :center;
+    justify-content: center;
+    width: fit-content;
+    height: auto;
+    border-radius: 20px;
+    margin-right:auto;
+    margin-left: auto;
+    padding: 50px;
+   background-color: white;
+}
+
+#div-connexion form * {
+    display: block;
+}
+
+#div-connexion form input {
+    padding: 20px 0;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom:0.4px solid green;
+    width: 400px;
+}
+
+#div-connexion form label {
+    margin-top: 30px;
+    color: rgb(93, 91, 91);
+}
+
+
+#div-connexion form button {
+    margin: 30px auto;
+    border:none;
+    background-color: rgb(171, 94, 243);
+    color:white;
+    font-size: 18px;
+    padding : 9px 15px;
+    border-radius: 5px;
+}
+
