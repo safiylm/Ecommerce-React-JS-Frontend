@@ -1,0 +1,37 @@
+.div-accueil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-femme img{
+   
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    margin:10px;
+    
+}
+
+.div-homme img{
+   
+    width: 400px;
+    height: 600px;
+    margin:10px;
+    object-fit: cover;
+
+}
+
+.div-enfant img{
+   
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+  
+    margin:10px;
+}
+
+.div-enfant h1, .div-femme h1 , .div-homme h1{
+    text-align: center;
+}

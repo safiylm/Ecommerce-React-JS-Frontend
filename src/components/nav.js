@@ -12,7 +12,7 @@ const Nav = () => {
           <Link to="/enfant">Enfant</Link>
         </div>
         <div>
-          <Link>BSKA</Link>
+          <Link to="/">BSKA</Link>
         </div>
         <div>
           <Link to="/search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
