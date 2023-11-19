@@ -5,34 +5,25 @@ import { Outlet, Link } from "react-router-dom";
 function displayNavFemme() {
   document.getElementById("nav-femme-supplementaire").style.display = 'block'
   document.getElementById("nav-homme-supplementaire").style.display = 'none'
-  document.getElementById("nav-enfant-supplementaire").style.display = 'none'
-
 }
+
 function displayNavHomme() {
   document.getElementById("nav-homme-supplementaire").style.display = 'block'
-  document.getElementById("nav-enfant-supplementaire").style.display = 'none'
   document.getElementById("nav-femme-supplementaire").style.display = 'none'
-
-
 }
-function displayNavEnfant() {
-  document.getElementById("nav-enfant-supplementaire").style.display = 'block'
-  document.getElementById("nav-homme-supplementaire").style.display = 'none'
-  document.getElementById("nav-femme-supplementaire").style.display = 'none'
 
 
-}
 
 
 function hideNavFemme() {
   document.getElementById("nav-femme-supplementaire").style.display = 'none'
 }
+
 function hideNavHomme() {
   document.getElementById("nav-homme-supplementaire").style.display = 'none'
 }
-function hideNavEnfant() {
-  document.getElementById("nav-enfant-supplementaire").style.display = 'none'
-}
+
+
 
 const Nav = () => {
 
@@ -42,7 +33,6 @@ const Nav = () => {
         <div>
           <Link id="nav-femme" to="/femme" onMouseOver={displayNavFemme} >Femme</Link>
           <Link id="nav-homme" to="/homme" onMouseOver={displayNavHomme} >Homme</Link>
-          <Link id="nav-enfant" to="/enfant" onMouseOver={displayNavEnfant} >Enfant</Link>
         </div>
         <div>
           <Link to="/">BSKA</Link>
@@ -60,26 +50,20 @@ const Nav = () => {
         </div>
       </nav>
       <div id='nav-femme-supplementaire' onMouseLeave={hideNavFemme} >
-        <a>Nouveautés femmes</a>
-        <a>Vêtements</a>
-        <a>Chaussures</a>
-        <a>Accessoires</a>
-
+        <a href="/femme?ctg=Nouveautes">Nouveautés femmes</a>
+        <a href="/femme?ctg=Vetements">Vêtements</a>
+        <a href="/femme?ctg=Chaussures">Chaussures</a>
+        <a href="/femme?ctg=Accessoires">Accessoires</a>
       </div>
 
       <div id='nav-homme-supplementaire' onMouseLeave={hideNavHomme} >
-        <a>Nouveautés hommes</a>
-        <a>Vêtements</a>
-        <a>Chaussures</a>
-        <a>Accessoires</a>
+        <a href="/homme?ctg=Nouveautes">Nouveautés hommes</a>
+        <a href="/homme?ctg=Vetements">Vêtements</a>
+        <a href="/homme?ctg=Chaussures">Chaussures</a>
+        <a href="/homme?ctg=Accessoires">Accessoires</a>
       </div>
 
-      <div id='nav-enfant-supplementaire' onMouseLeave={hideNavEnfant} >
-        <a>Nouveautés enfants</a>
-        <a>Vêtements</a>
-        <a>Chaussures</a>
-        <a>Accessoires</a>
-      </div>
+
       <Outlet />
     </>
   )

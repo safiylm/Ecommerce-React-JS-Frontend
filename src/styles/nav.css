@@ -36,7 +36,7 @@ nav div a {
   text-decoration: underline;
 }
 
-#nav-femme-supplementaire, #nav-homme-supplementaire, #nav-enfant-supplementaire{
+#nav-femme-supplementaire, #nav-homme-supplementaire{
   display:none;
   height: auto;
   width: 100%;
@@ -47,8 +47,7 @@ nav div a {
 }
 
 #nav-femme-supplementaire a, 
-#nav-homme-supplementaire a,
-#nav-enfant-supplementaire a
+#nav-homme-supplementaire a
 {
   display: block;
   text-decoration: none;
@@ -59,8 +58,7 @@ nav div a {
 }
 
 #nav-femme-supplementaire a:hover, 
-#nav-homme-supplementaire a:hover,
-#nav-enfant-supplementaire a:hover
+#nav-homme-supplementaire a:hover
 {
   color:rgb(122, 118, 118);
 

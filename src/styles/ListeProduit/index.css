@@ -1,15 +1,20 @@
 .div-liste-produits{
     display: flex;
-    justify-content: center;
-
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 1250px;
+    padding: auto;
 }
+
 .div-un-produit{
-    margin: 15px;
+    margin: 5px;
+    width: 400px;
 }
 
 .div-un-produit a img{
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 550px;
     object-fit: cover;
 }
 
