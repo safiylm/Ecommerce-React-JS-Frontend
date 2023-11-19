@@ -49,3 +49,13 @@
     border-radius: 5px;
 }
 
+#go_page_inscription{
+    color:#bb33dc;
+    text-decoration: none;
+    padding : 9px 15px;
+    border: 1px solid #bb33dc ;
+    border-radius: 5px;
+    text-align: center;
+    width: min-content;
+    margin: 10px auto;
+}

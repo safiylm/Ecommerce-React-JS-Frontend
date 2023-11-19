@@ -6,6 +6,9 @@ import ListeProduit from './components/liste-produit';
 import Search from './components/search/search';
 import Connexion from './components/auth/connexion';
 import Accueil from './components/accueil';
+import Inscription from './components/auth/inscription';
+
+
 function App() {
   return (
 
@@ -21,6 +24,7 @@ function App() {
 
           <Route path="search" element={<Search />} />
           <Route path="connexion" element={<Connexion />} />
+          <Route path="inscription" element={<Inscription />} />
         </Route>
       </Routes>
     </BrowserRouter>
