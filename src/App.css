@@ -32,10 +32,18 @@ body {
 .left  .div-mon-panier,  
 .right .div-form-bon-de-reduction
 {
-  margin:10px;
+  margin: 10px 60px;
   background-color: white;
   padding: 10px;
 
+}
+
+.right .div-form-bon-de-reduction
+{
+  margin: 20px ;
+  padding: 9px;
+  box-sizing: border-box;
+  outline: none
 }
 
 @media screen and (max-width: 1000px) {

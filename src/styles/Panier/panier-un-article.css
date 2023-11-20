@@ -9,7 +9,8 @@
 
 .div-un-article img {
     height: 250px;
-    width: auto;
+    width: 200px;
+    object-fit: cover;
 }
 
 .div-un-article .article-info {
