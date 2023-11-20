@@ -3,14 +3,14 @@ import PanierInfoLivraison from '../panier/panier-info-livraison'
 import { Outlet, Link } from "react-router-dom";
 
 
-function InfoProduit() {
+function InfoProduit({info_prod}) {
 
     return (
         <div className='div-info-produit1'>
             <div className='div-info-produit2'>
-                <h1 className='titreProduit'>Escarpins à talons hauts</h1>
-                <h2 className='prix'>49,99 $ </h2>
-                <p className='couleur'>Couleur:black</p>
+                <h1 className='titreProduit'>{info_prod.nom}</h1>
+                <h2 className='prix'>{info_prod.prix} € </h2>
+                <p className='couleur'> </p>
 
                 <div className="div-taille">
                     <select>

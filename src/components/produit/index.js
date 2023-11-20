@@ -14,7 +14,7 @@ function Produit({panier}) {
     return (
         <div className="div-photo-info">
             <Photo liste_photos={liste_produits[id_param].image_url}/>
-            <InfoProduit />
+            <InfoProduit info_prod={liste_produits[id_param]} />
         </div>
 
     );
