@@ -6,7 +6,8 @@ import PanierFormBonDeReduction from './panier-form-bon-de-reduction.js'
 import PanierInfoLivraison from './panier-info-livraison.js'
 import {useState} from "react"
 
-function Panier() {
+
+function Panier({panier, setPanier}) {
   
   const [numberArticle, setNumberArticle] = useState(1);
   return ( 
@@ -15,11 +16,11 @@ function Panier() {
       <ReductionBarreHorizontale />
       <div className="panier-main">
         <div className="left">
-          <PanierListe numberArticle={numberArticle} setNumberArticle={setNumberArticle}/>
+          <PanierListe panier={panier} setPanier={setPanier} numberArticle={numberArticle} setNumberArticle={setNumberArticle}/>
           <PanierInfoLivraison/>
         </div>
         <div className="right">
-          <PanierTotale numberArticle={numberArticle} setNumberArticle={setNumberArticle} />
+          <PanierTotale  panier={panier} numberArticle={numberArticle} setNumberArticle={setNumberArticle} />
           <PanierFormBonDeReduction />
 
         </div>

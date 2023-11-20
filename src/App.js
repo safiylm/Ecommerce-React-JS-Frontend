@@ -8,19 +8,22 @@ import Search from './components/search/search';
 import Connexion from './components/auth/connexion';
 import Accueil from './components/accueil';
 import Inscription from './components/auth/inscription';
+import React, { useEffect, useState } from "react";
 
 
 function App() {
+  const [panier, setPanier] = useState([12, 8,11,15]);
+
   return (
 
     <BrowserRouter>
       <Routes>
         <Route path="/" element={< Nav />}>
           <Route index element={<Accueil />} />
-          <Route path="panier" element={<Panier />} />
-          <Route path="produit" element={<Produit />} />
-          <Route path="femme" element={<ListeProduitFemme />} />
-          <Route path="homme" element={<ListeProduitHomme />} />
+          <Route path="panier" element={<Panier panier={panier} setPanier={setPanier}/>} />
+          <Route path="produit" element={<Produit panier={panier} />} />
+          <Route path="femme" element={<ListeProduitFemme panier={panier} />} />
+          <Route path="homme" element={<ListeProduitHomme panier={panier} />} />
           <Route path="search" element={<Search />} />
           <Route path="connexion" element={<Connexion />} />
           <Route path="inscription" element={<Inscription />} />
@@ -31,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+

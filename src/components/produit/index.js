@@ -5,7 +5,7 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 
 
 
-function Produit() {
+function Produit({panier}) {
 
     const queryParameters = new URLSearchParams(window.location.search)
     const id_param = queryParameters.get("id")
