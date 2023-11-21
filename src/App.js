@@ -12,7 +12,9 @@ import React, { useEffect, useState } from "react";
 
 
 function App() {
-  const [panier, setPanier] = useState([12, 8,11,15]);
+  const [panier, setPanier] = useState([{"id_produit": 16, "quantite" : 1 },
+                                        {"id_produit": 9, "quantite" : 1 },
+                                        {"id_produit": 5, "quantite" : 1 } ]);
 
   return (
 

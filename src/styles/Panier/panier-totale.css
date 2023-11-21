@@ -11,9 +11,14 @@
 
 .somme{
     display: flex;
+    flex-direction:column;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
     padding: 10px 0;
+}
+
+.somme * {
+    margin: 6px;;
 }
 
 .livraison-x{

@@ -2,7 +2,28 @@ import '../../styles/Panier/panier-un-article.css'
 import { Outlet, Link } from "react-router-dom";
 import { liste_produits } from '../liste-produit/array-liste-produit'
 
-function UnArticle({ id_produit, setNumberArticle }) {
+
+
+
+function UnArticle({ id_produit, panier , setPanier}) {
+
+
+    
+// This function change quantity of product in panier 
+  const ChangeQuantite= (nb)=> {
+
+    let updatedUser ={"id_produit" : id_produit , "quantite" : nb }
+
+     const updatedObject = panier.map((p) =>
+      p.id_produit == id_produit ? updatedUser : p
+    );
+    console.log(updatedObject)
+    // update the users state with the updated user
+    setPanier(updatedObject);
+  }
+
+
+
 
     return (
         <>
@@ -30,13 +51,14 @@ function UnArticle({ id_produit, setNumberArticle }) {
                             <div className="div-quantite">
                                 <div> Quantité &nbsp;&nbsp;</div>
                                 <select>
-                                    <option onClick={() => setNumberArticle(1)}> 1</option>
-                                    <option onClick={() => setNumberArticle(2)}> 2</option>
-                                    <option onClick={() => setNumberArticle(3)}> 3</option>
-                                    <option onClick={() => setNumberArticle(4)}> 4</option>
-                                    <option onClick={() => setNumberArticle(5)}> 5</option>
+                                    <option onClick={() => ChangeQuantite(1) }> 1</option>
+                                    <option onClick={() => ChangeQuantite(2) }> 2</option>
+                                    <option onClick={() => ChangeQuantite(3) }> 3</option>
+                                    <option onClick={() => ChangeQuantite(4) }> 4</option>
+                                    <option onClick={() => ChangeQuantite(5) }> 5</option>
                                 </select>
                             </div>
+                          
                             
                         </div>
                     </div>
