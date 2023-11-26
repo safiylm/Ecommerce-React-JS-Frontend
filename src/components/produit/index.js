@@ -5,7 +5,7 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 
 
 
-function Produit({panier}) {
+function Produit({panier, addInPanier }) {
 
     const queryParameters = new URLSearchParams(window.location.search)
     const id_param = queryParameters.get("id")
@@ -13,8 +13,8 @@ function Produit({panier}) {
 
     return (
         <div className="div-photo-info">
-            <Photo liste_photos={liste_produits[id_param].image_url}/>
-            <InfoProduit info_prod={liste_produits[id_param]} />
+            <Photo liste_photos={liste_produits[id_param].image_url} />
+            <InfoProduit info_prod={liste_produits[id_param]} id_prod={id_param} panier={panier }/>
         </div>
 
     );

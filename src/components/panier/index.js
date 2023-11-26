@@ -7,7 +7,7 @@ import PanierInfoLivraison from './panier-info-livraison.js'
 import {useState} from "react"
 
 
-function Panier({panier, setPanier}) {
+function Panier({panier, setPanier, addInPanier}) {
   
   const [numberArticle, setNumberArticle] = useState(1);
   return ( 

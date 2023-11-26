@@ -3,22 +3,35 @@ import PanierInfoLivraison from '../panier/panier-info-livraison'
 import { Outlet, Link } from "react-router-dom";
 
 
-function InfoProduit({info_prod}) {
+function InfoProduit({ info_prod, id_prod, panier }) {
 
     return (
         <div className='div-info-produit1'>
             <div className='div-info-produit2'>
                 <h1 className='titreProduit'>{info_prod.nom}</h1>
                 <h2 className='prix'>{info_prod.prix} € </h2>
-                <p className='couleur'> </p>
+                <p className='couleur'> Couleur : {info_prod.couleur} </p>
+
+                {panier.filter(p => p.id_produit == id_prod).length <= 0 ?
+                    <button onclick="addInPanier()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" color="pinkhot" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg> </button>
+                    :
+                    <button onclick="removeInPanier()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" color="pinkhot" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                        </svg>
+
+                    </button>
+                }
+
 
                 <div className="div-taille">
                     <select>
-                        <option>38</option>
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
+                        {info_prod.taille.map((t) => (
+                            <option>{t}</option>
+                        ))}
                     </select>
                 </div>
                 <div className='div-add-panier-herat'>
@@ -29,30 +42,31 @@ function InfoProduit({info_prod}) {
                     </svg></button>
                 </div>
             </div>
+
+
             <PanierInfoLivraison />
             <div>
                 <button className='btn-infosupp-matiere'>Matière et entretien</button>
                 <div className='div-infosupp-matiere'>
-                    <p>Dessus / Tige:   Polyuréthane</p>
-                    <p>Doublure: Imitation cuir / textile</p>
-                    <p>Semelle de propreté: Synthétique</p>
-                    <p>Semelle d'usure: Matière synthétique</p>
-                    <p>Épaisseur de la doublure: Non doublé</p>
-                    <p>Matière: Cuir synthétique</p>
+
+                    {info_prod.matiere_entretien.map((t) => (
+                        <p>{t}</p>
+                    ))}
+
                 </div>
                 <button className='btn-infosupp-detail'>Détails du produit </button>
                 <div className='div-infosupp-detail'>
-                    <p>Bout de la chaussure: Rond</p>
-                    <p>Forme du talon: Bloc, plateforme</p>
-                    <p>Fermeture: Boucle</p>
-                    <p>Motif / Couleur: Couleur unie</p>
-                    <p>Référence: BEJ11B02O-Q11</p>
+                    {info_prod.detail_produit.map((t) => (
+                        <p>{t}</p>
+                    ))}
+
+
                 </div>
                 <button className='btn-infosupp-taille'>Taille & coupe </button>
                 <div className='div-infosupp-taille'>
-                    <p>Hauteur du talon: 11 cm en taille 37</p>
-                    <p>Hauteur de talon: Haut</p>
-                    <p>Hauteur de plateau: 4.5 cm en taille 37</p>
+                    {info_prod.taille_coupe.map((t) => (
+                        <p>{t}</p>
+                    ))}
                 </div>
             </div>
         </div >

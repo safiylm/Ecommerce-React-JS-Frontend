@@ -16,6 +16,10 @@ function App() {
                                         {"id_produit": 9, "quantite" : 1 },
                                         {"id_produit": 5, "quantite" : 1 } ]);
 
+  const addInPanier=(newProduct)=>{setPanier(prevArray => [...prevArray, {"id_produit":2, "quantite" : 1  }]) }
+  
+  const removeInPanier=()=>{}
+  
   return (
 
     <BrowserRouter>
@@ -23,9 +27,9 @@ function App() {
         <Route path="/" element={< Nav />}>
           <Route index element={<Accueil />} />
           <Route path="panier" element={<Panier panier={panier} setPanier={setPanier}/>} />
-          <Route path="produit" element={<Produit panier={panier} />} />
-          <Route path="femme" element={<ListeProduitFemme panier={panier} />} />
-          <Route path="homme" element={<ListeProduitHomme panier={panier} />} />
+          <Route path="produit" element={<Produit panier={panier} addInPanier={addInPanier} />} />
+          <Route path="femme" element={<ListeProduitFemme panier={panier}  addInPanier={addInPanier}/>} />
+          <Route path="homme" element={<ListeProduitHomme panier={panier} addInPanier={addInPanier}/>} />
           <Route path="search" element={<Search />} />
           <Route path="connexion" element={<Connexion />} />
           <Route path="inscription" element={<Inscription />} />
