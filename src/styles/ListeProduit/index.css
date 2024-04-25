@@ -3,9 +3,10 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 20px auto;
-    width: 1250px;
+    width: 100%;
     padding: auto;
 }
+
 
 .div-un-produit{
     margin: 5px;
@@ -21,4 +22,16 @@
 .div-un-produit p{
     text-align: center;
     color:black;
+}
+
+
+@media(max-width: 450px){
+    .div-liste-produits .div-un-produit{
+        width: 100%;
+    }
+    
+    .div-un-produit a img{
+        width: 100%;
+        height: auto;
+    }
 }

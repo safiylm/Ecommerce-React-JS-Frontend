@@ -50,6 +50,13 @@ body {
   .panier-main {
     flex-direction: column;
   }
+
+  .left  .div-mon-panier,  
+.right .div-form-bon-de-reduction
+{
+  margin: 5px ;
+  padding: 0;
+}
   
   .left {
     flex: 100%;

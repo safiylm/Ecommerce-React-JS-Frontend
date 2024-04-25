@@ -18,6 +18,17 @@ nav {
 
 }
 
+@media (max-width: 900px){
+nav{
+  flex-direction: column ;
+  height: auto;
+}
+nav div{
+  padding: 7px;
+}
+
+}
+
 nav div a {
   color: black;
   margin-left: 20px;

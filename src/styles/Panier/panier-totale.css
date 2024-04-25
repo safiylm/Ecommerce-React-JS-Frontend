@@ -45,3 +45,13 @@
     margin-bottom: 20px;
     font-size: 14px;
 }
+
+@media screen and (max-width: 1000px) {
+    .div-total-paiement{
+        margin:5px;
+        background-color: white;
+        padding: 10px 0px;
+    }
+    
+
+}

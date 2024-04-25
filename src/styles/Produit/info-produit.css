@@ -1,99 +1,148 @@
-body{
+body {
     background-color: white;
 }
+*{
+    box-sizing: border-box;
+}
 
-div-info-produit1{
-    max-width: 600px;
+.divInfo-container {
+    margin: 10px auto;
+}
+
+.div-info-produit {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 }
 
 
-.div-info-produit2{
-    margin-left: 70px;
-    max-width: 600px;
+.div-info-produit {
+    max-width: 500px;
 }
 
 
-.div-info-livraison-1, .div-info-livraison-2{
-    margin-top:20px;
-    margin-left: 70px !important;
-    margin-right: 0;
+.div-info-livraison-1,
+.div-info-livraison-2 {
+    margin: 5px 0;
     max-width: 500px;
     border: 0.2px solid black;
 
 }
 
 
-.titreProduit2{
+.titreProduit2 {
     font-weight: 500;
 }
 
 
-.prix{
+.prix {
     font-size: 20px;
     font-weight: 200;
 }
 
 
-.couleur{
+.couleur {
     font-size: 15px;
 }
 
 
 .div-taille select {
-   
+
     padding: 10px;
     background-color: white;
     border: 0.2px solid gray;
     width: 100%;
-    font-size:18px;
+    font-size: 18px;
 }
 
 
-.div-add-panier-herat{
+.div-add-panier-herat {
     width: 100%;
     display: flex;
 
 }
 
-#btn-panier{
-    flex:70%;
+#btn-panier {
+    flex: 70%;
     padding: 14px;
     color: white !important;
     background-color: black;
-    border:none;
-    font-size:16px;
+    border: none;
+    font-size: 16px;
     text-decoration: none !important;
 }
 
-a{
-    color :white;
+a {
+    color: white;
     text-decoration: none;
 }
 
-#btn-heart{
-    flex:30%;
+#btn-heart {
+    flex: 30%;
     padding: 10px;
     background-color: white;
     border: 0.2px solid black;
-    font-size:16px;
+    font-size: 16px;
 
 }
 
-.btn-infosupp-matiere, .btn-infosupp-taille, .btn-infosupp-detail{
+.btn-infosupp-matiere,
+.btn-infosupp-taille,
+.btn-infosupp-detail {
     border: none;
     text-align: left;
     font-weight: 600;
     font-size: 16px;
     border-bottom: 0.3px solid gray;
     padding: 20px;
-    margin-left: 70px;
-    width: 600px;
+    width: 500px;
     background-color: white;
 }
 
-.div-infosupp-matiere, .div-infosupp-taille, .div-infosupp-detail{
-    margin-left: 70px;
-    width: 600px;
+.div-infosupp-matiere,
+.div-infosupp-taille,
+.div-infosupp-detail {
+    width: 500px;
+}
+
+
+@media(max-width: 620px) {
+
+    .div-info-produit,
+    .div-info-produit * {
+        width: 95vw;
+        margin: 5px 0 !important;
+        padding: 0;
+    }
+
+    .div-info-produit,
+    .div-info-livraison-1,
+    .div-info-livraison-2,
+    .div-matiere-container {
+        margin: 10px auto;
+    }
+
+
+    .div-info-livraison-1,
+    .div-info-livraison-2 {
+        width: 95vw;
+        margin: 5px 0 !important;
+        padding: 0;
+    }
+
+    .div-add-panier-herat {
+        display: block;
+    }
+
+    .div-infosupp-matiere,
+    .div-infosupp-taille,
+    .div-infosupp-detail,
+    .btn-infosupp-matiere,
+    .btn-infosupp-taille,
+    .btn-infosupp-detail {
+        width: 95vw;
+        margin: 5px 0 !important;
+        padding: 10px 0;
+    }
+
 }

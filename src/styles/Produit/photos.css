@@ -1,30 +1,51 @@
-.divPhotos{
+.divPhotos {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-     justify-content: center;
-   
+    align-items: center;
+    justify-content: center;
 
 }
 
-.listePhotoVertical{
+.listePhotoVertical {
     display: flex;
     flex-direction: column;
     height: 700px;
     overflow: scroll;
 }
 
-.listePhotoVertical img{
+.listePhotoVertical img {
     width: 100px;
     height: 150px;
 }
 
-#photoViewer{
+#photoViewer {
     width: 500px;
     height: 700px;
     object-fit: contain;
 }
 
-.listePhotoVertical img:hover{
-    border: 1px solid black ;
+.listePhotoVertical img:hover {
+    border: 1px solid black;
+}
+
+@media(max-width: 620px) {
+
+    .divPhotos {
+        flex-direction: column-reverse;
+    }
+
+    .listePhotoVertical {
+        flex-direction: row;
+        height: max-content;
+        overflow: scroll;
+    width: 95vw;
+    }
+
+    #photoViewer {
+        width: 95vw;
+        margin: 0;
+        padding: 0;
+    }
+
+
 }

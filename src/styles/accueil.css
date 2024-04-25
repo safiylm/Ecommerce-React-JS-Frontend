@@ -1,36 +1,37 @@
-.div-accueil{
+.div-accueil {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.div-femme img{
-   
+.div-femme img ,
+.div-homme img {
+
     width: 400px;
     height: 600px;
     object-fit: cover;
-    margin:10px;
-    
-}
-
-.div-homme img{
-   
-    width: 400px;
-    height: 600px;
-    margin:10px;
-    object-fit: cover;
+    margin: 10px;
 
 }
 
-
-
-.div-femme h1 , .div-homme h1{
+.div-femme h1,
+.div-homme h1 {
     text-align: center;
 }
 
-.div-femme h1 a , .div-homme h1 a
-{
-    color:black;
+.div-femme h1 a,
+.div-homme h1 a {
+    color: black;
     text-decoration: none;
+}
+
+@media(max-width: 450px) {
+
+    .div-femme img,
+    .div-homme img {
+        width: 95vw;
+        margin: 0;
+    }
 }

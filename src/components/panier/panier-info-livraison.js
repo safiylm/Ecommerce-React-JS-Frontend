@@ -3,7 +3,7 @@ import '../../styles/Panier/panier-info-livraison.css'
 function PanierInfoLivraison() {
     return (
 
-        <div>
+        <>
             <div className="div-info-livraison-1">
                 <h4>LIVRAISON ASOSO PREMIER FRANCE</h4>
                 <p>Bénéficiez de la livraison 24h à domicile ou en point de relais illimitée pendant un an pour
@@ -17,7 +17,7 @@ function PanierInfoLivraison() {
                 </h4>
                 <p></p>
             </div>
-        </div>
+        </>
 
 
 
