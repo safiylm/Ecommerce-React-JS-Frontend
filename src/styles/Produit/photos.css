@@ -16,12 +16,13 @@
 .listePhotoVertical img {
     width: 100px;
     height: 150px;
+    object-fit: cover;
 }
 
 #photoViewer {
     width: 500px;
     height: 700px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .listePhotoVertical img:hover {

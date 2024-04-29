@@ -1,8 +1,6 @@
 #page-connexion{
-background: linear-gradient(90deg, #816588 0%, #819899 100%);    width: 100%;
     padding: 100px 0;
     margin: 0;
-    height:80vh;
 }
 
 #div-connexion{
@@ -16,7 +14,7 @@ background: linear-gradient(90deg, #816588 0%, #819899 100%);    width: 100%;
     margin-right:auto;
     margin-left: auto;
     padding: 50px;
-   background-color: white;
+    box-shadow: 10px 10px 14px 14px #cecece;
 }
 
 #div-connexion form * {
@@ -24,17 +22,21 @@ background: linear-gradient(90deg, #816588 0%, #819899 100%);    width: 100%;
 }
 
 #div-connexion form input {
-    padding: 20px 0;
-    font-size: 16px;
+    padding: 12px 0;
+    font-size: 14px;
     outline: none;
     border: none;
+
     border-bottom:0.4px solid green;
-    width: 400px;
+    width: 350px;
 }
 
 #div-connexion form label {
     margin-top: 30px;
-    color: rgb(93, 91, 91);
+    margin-bottom: 5px;
+    color: rgb(40, 40, 40);
+    font-size: 14px;
+    font-weight: 300;
 }
 
 
@@ -42,27 +44,35 @@ background: linear-gradient(90deg, #816588 0%, #819899 100%);    width: 100%;
     margin: 30px auto;
     border:none;
     background-color: rgb(171, 94, 243);
+      background-color: rgb(94, 149, 127);
     color:white;
-    font-size: 18px;
-    padding : 9px 15px;
+    font-size: 15.5px;
+      padding: 11px 15px;
     border-radius: 5px;
 }
 
 #go_page_inscription{
-    color:#bb33dc;
+    color: rgb(94, 149, 127);
     text-decoration: none;
     padding : 9px 15px;
-    border: 1px solid #bb33dc ;
+    border: 1px solid rgb(94, 149, 127);
     border-radius: 5px;
     text-align: center;
     width: min-content;
     margin: 10px auto;
+    font-size: 15px;
+
 }
 
 @media(max-width: 450px){
+  #page-connexion {
+    padding: 50px 0;
+
+  }
     #div-connexion{
     padding: 10px;
     width: 95vw;
+      box-shadow: none;
     }
     form{
         width: 100%;
@@ -70,5 +80,20 @@ background: linear-gradient(90deg, #816588 0%, #819899 100%);    width: 100%;
     }
     #div-connexion form input {
         width: 100%;
-    }
+        padding: 20px 0;
+        margin-bottom: 42px;
+        font-size: 17px;
+      }
+      #div-connexion form label {
+        font-size: 17px;
+      }
+
+      #go_page_inscription,
+      #div-connexion form button{
+        padding : 15px 17px;
+        font-size: 17.5px;
+
+      }
+
+
 }

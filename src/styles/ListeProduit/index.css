@@ -1,6 +1,7 @@
 .div-liste-produits{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin: 20px auto;
     width: 100%;
@@ -11,16 +12,23 @@
 .div-un-produit{
     margin: 5px;
     width: 400px;
+    
 }
 
 .div-un-produit a img{
     width: 400px;
     height: 550px;
     object-fit: cover;
+  
 }
+  .div-un-produit #btnAddHeart, 
+  .div-un-produit #btnRemoveHeart {
+     border: none;
+     background-color: transparent;
+    }
+
 
 .div-un-produit p{
-    text-align: center;
     color:black;
 }
 
@@ -29,7 +37,7 @@
     .div-liste-produits .div-un-produit{
         width: 100%;
     }
-    
+
     .div-un-produit a img{
         width: 100%;
         height: auto;

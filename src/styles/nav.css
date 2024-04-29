@@ -1,7 +1,10 @@
 body{
   background-color:white;
 }
-
+a{
+  text-decoration: none;
+  color: black;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -57,7 +60,7 @@ nav div a {
 
 }
 
-#nav-femme-supplementaire a, 
+#nav-femme-supplementaire a,
 #nav-homme-supplementaire a
 {
   display: block;
@@ -68,7 +71,7 @@ nav div a {
 
 }
 
-#nav-femme-supplementaire a:hover, 
+#nav-femme-supplementaire a:hover,
 #nav-homme-supplementaire a:hover
 {
   color:rgb(122, 118, 118);
