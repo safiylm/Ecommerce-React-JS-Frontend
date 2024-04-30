@@ -1,7 +1,5 @@
-import '../../App.css';
 import ListeDeProduit from './liste-de-produit.js'
 import PanierTotale from './panier-totale.js'
-import InformationDeLivraison from './information-de-livraison.js'
 import {useState} from "react"
 
 
@@ -16,7 +14,6 @@ function Panier({panier, setPanier, addInPanier}) {
         </div>
         <div className="right">
           <PanierTotale  panier={panier} numberArticle={numberArticle} setNumberArticle={setNumberArticle} />
-          <InformationDeLivraison/>
 
 
         </div>

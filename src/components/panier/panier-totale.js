@@ -1,7 +1,8 @@
-import '../../styles/Panier/panier-totale.css'
+import '../../styles/Panier/totale.css'
 import React, { useEffect, useState } from "react";
 import { liste_produits } from '../liste-produit/array-liste-produit'
-import "../../styles/Panier/panier-form-bon-de-reduction.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import InformationDeLivraison from './information-de-livraison.js'
 
 function calculeSommeTotale(panier) {
 
@@ -21,38 +22,30 @@ function PanierTotale({ panier, numberArticle, setNumberArticle }) {
     const sommeTotal = calculeSommeTotale(panier)
     return (
 
-        <div className="div-total-paiement">
-            <h4>TOTAL</h4>
-            <div className="somme">
+        <div className="d-flex flex-column align-items-center justify-content-center ">
+           
                
-
+            <p></p><p></p>
                 {panier.length <= 0 ? <div> 0.00 € </div> :
 
                     panier.map((panier_index) =>
                         liste_produits.filter(prod => prod.id == panier_index.id_produit ).map((prod) =>
-                            <div> {prod.nom }     -    <strong> {panier_index.quantite} * {  (Math.round(prod.prix * 100) / 100).toFixed(2) } </strong> </div>
+                            <p> {prod.nom }     -    <strong> {panier_index.quantite} * {  (Math.round(prod.prix * 100) / 100).toFixed(2) } </strong> </p>
                         ))
                 }
                 <p></p>
                 <p></p>
-               <div style={{ "font-size": "20.5px"}}>  <strong>{(Math.round( sommeTotal* 100) / 100).toFixed(2)} € </strong></div>
-            </div> 
+               <div style={{ "font-size": "20.5px"}}>  TOTAL : <strong>{(Math.round( sommeTotal* 100) / 100).toFixed(2)} € </strong></div>
+               <p></p>
+               <p></p>
 
-            <div className="livraison-x">
-                <div>Livraison</div>
-                <select>
-                    <option>Livraison Standard en Point de relais ...</option>
-                </select>
-            </div>
+          
             <button  id="paiement-btn">PAIEMENT</button>
-            <div className="div-form-bon-de-reduction">
-            <input placeholder="Mon bon de réduction" />
-            <button>Ajouter</button>
+          <InformationDeLivraison/>
+           
+         
         </div>
           
-
-        </div>
-
 
 
 

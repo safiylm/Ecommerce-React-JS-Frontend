@@ -1,0 +1,40 @@
+.panier-main {
+    width: 100%;
+    display: flex;
+}
+
+.right,
+.left {
+    margin: 20px auto;
+}
+
+.left .div-mon-panier {
+    margin: 10px 0;
+    background-color: white;
+    padding: 10px;
+    width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+    .panier-main {
+        flex-direction: column;
+    }
+
+    .left .div-mon-panier {
+        margin: 0;
+        padding: 0;
+    }
+
+    .left .div-mon-panier,
+    .right * {
+        width: 95vw;
+    }
+
+    .right,
+    .left {
+        margin: 10px auto;
+        width: 95vw;
+
+    }
+
+}

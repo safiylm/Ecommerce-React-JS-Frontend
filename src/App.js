@@ -9,7 +9,7 @@ import Connexion from './components/auth/connexion';
 import Accueil from './components/accueil';
 import Inscription from './components/auth/inscription';
 import React, { useEffect, useState } from "react";
-
+import ListeFavoris from './components/favoris/index'
 
 function App() {
   const [panier, setPanier] = useState([{"id_produit": 16, "quantite" : 1 },
@@ -31,6 +31,8 @@ function App() {
           <Route path="femme" element={<ListeProduitFemme panier={panier}  addInPanier={addInPanier}/>} />
           <Route path="homme" element={<ListeProduitHomme panier={panier} addInPanier={addInPanier}/>} />
           <Route path="search" element={<Search  panier={panier} addInPanier={addInPanier} />} />
+          <Route path="favoris" element={<ListeFavoris  panier={panier} addInPanier={addInPanier} />} />
+          
           <Route path="connexion" element={<Connexion />} />
           <Route path="inscription" element={<Inscription />} />
         </Route>

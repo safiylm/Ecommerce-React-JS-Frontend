@@ -1,0 +1,34 @@
+
+.div-info-livraison-1, .div-info-livraison-2{
+
+    font-weight: 100;
+    font-size: 13px;
+    background-color: white;
+   
+    padding: 10px 30px;
+    margin: 0;
+    width: 400px;
+}
+
+.div-info-livraison-1{
+    background-color: black !important;
+    color:white;
+  
+}
+
+@media screen and (max-width: 1000px) {
+    .div-info-livraison-1, .div-info-livraison-2{
+        width: 95vw;
+        max-width: 95vw !important;
+        padding: auto !important;
+        height: auto;
+   
+    }
+
+    .div-info-livraison-1 *, .div-info-livraison-2 *{
+        width: 85vw;
+
+    }
+
+
+}

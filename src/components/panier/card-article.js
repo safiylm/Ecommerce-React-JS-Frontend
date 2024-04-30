@@ -1,4 +1,4 @@
-import '../../styles/Panier/panier-un-article.css'
+import '../../styles/Panier/produit.css'
 import { Outlet, Link } from "react-router-dom";
 import { liste_produits } from '../liste-produit/array-liste-produit'
 
