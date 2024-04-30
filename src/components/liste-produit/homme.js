@@ -3,7 +3,7 @@ import { liste_produits } from './array-liste-produit'
 import ProduitCard from '../produit/card'
 
 
-function ListeProduitHomme({ panier, addInPanier }) {
+function ListeProduitHomme({  listeFavoris, setListeFavoris  }) {
     const queryParameters = new URLSearchParams(window.location.search)
     const categorie = queryParameters.get("ctg")
 
@@ -13,11 +13,13 @@ function ListeProduitHomme({ panier, addInPanier }) {
             {(categorie != null) ?
 
                 liste_produits.filter(prod => prod.categorie[0] == categorie).filter(prod => prod.sexe == "Homme").map((produit) =>
-                    < ProduitCard prod={produit} panier={panier} addInPanier={addInPanier} />
+                    < ProduitCard prod={produit} listeFavoris={listeFavoris}
+                    setListeFavoris={setListeFavoris}/>
                 )
                 :
                 liste_produits.filter(prod => prod.sexe == "Homme").map((produit) =>
-                    < ProduitCard prod={produit} panier={panier} addInPanier={addInPanier} />
+                    < ProduitCard prod={produit} listeFavoris={listeFavoris}
+                    setListeFavoris={setListeFavoris}/>
                 )
 
             }

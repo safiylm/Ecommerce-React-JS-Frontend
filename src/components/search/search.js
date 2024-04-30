@@ -19,8 +19,11 @@ class Search extends Component {
 
 
   render() {
-    const panier = this.props.panier;
-    const addInPanier = this.props.addInPanier;
+  
+    const listeFavoris = this.props.listeFavoris;
+    const setListeFavoris = this.props.setListeFavoris;
+
+
     return (
       <>
         <div className="div-search">
@@ -42,7 +45,8 @@ class Search extends Component {
 
         <div className='d-flex flex-wrap align-items-center justify-content-center'>
           {liste_produits.filter(prod => prod.nom.includes( this.state.productSearch_) ).map((produit) =>
-            < ProduitCard prod={produit}  panier={panier} addInPanier={addInPanier} />
+            < ProduitCard prod={produit}   listeFavoris={listeFavoris}
+            setListeFavoris={setListeFavoris} />
           )}
         </div>
 

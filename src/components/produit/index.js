@@ -5,8 +5,7 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 import PhotosProduit from "./photo";
 
 
-
-function PageProduit({panier, addInPanier }) {
+function PageProduit({panier, addInPanier, listeFavoris, setListeFavoris }) {
 
     const queryParameters = new URLSearchParams(window.location.search)
     const id_param = queryParameters.get("id")

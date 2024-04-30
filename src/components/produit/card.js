@@ -5,7 +5,7 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 
 
 
-function ProduitCard({prod, panier, addInPanier }) {
+function ProduitCard({prod,  listeFavoris, setListeFavoris }) {
 
     return (
         <div key={prod.id} className="div-un-produit">
@@ -16,7 +16,7 @@ function ProduitCard({prod, panier, addInPanier }) {
 
                   <div><p>{prod.marque}</p> <p>{prod.nom}</p><p>{prod.prix}€</p>
                   </div>
-                   {panier.filter(p => p.id_produit == prod.id).length <= 0 ?
+                   {listeFavoris.filter(f => f == prod.id).length <= 0 ?
                     <button id="btnAddHeart" >
                     {/* onclick={() => addInPanier(2)}  */}
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" color="pinkhot" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
