@@ -6,7 +6,7 @@ function ClickImage(e){
     document.getElementById("photoViewer").src=e;
 }
 
-function Photos({liste_photos}) {
+function PhotosProduit({liste_photos}) {
    
     return (
 
@@ -25,4 +25,4 @@ function Photos({liste_photos}) {
     );
 }
 
-export default Photos;
+export default PhotosProduit;

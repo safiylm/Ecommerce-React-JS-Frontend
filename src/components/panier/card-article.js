@@ -5,7 +5,7 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 
 
 
-function UnArticle({ id_produit, panier, setPanier }) {
+function CardProduitPanier({ id_produit, panier, setPanier }) {
 
 
 
@@ -68,4 +68,4 @@ function UnArticle({ id_produit, panier, setPanier }) {
 
 }
 
-export default UnArticle;
+export default CardProduitPanier;

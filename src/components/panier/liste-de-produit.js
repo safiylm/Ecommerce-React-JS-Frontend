@@ -1,8 +1,8 @@
 import '../../styles/Panier/panier-liste.css'
-import UnArticle from '../../components/panier/panier-un-article'
+import CardProduitPanier from './card-article'
 import { liste_produits } from '../liste-produit/array-liste-produit'
 
-function PanierListe({ panier, setPanier, numberArticle, setNumberArticle }) {
+function ListeDeProduit({ panier, setPanier, numberArticle, setNumberArticle }) {
 
 
   return (
@@ -15,7 +15,7 @@ function PanierListe({ panier, setPanier, numberArticle, setNumberArticle }) {
         panier.map((panier_index) =>
           liste_produits.filter(prod => prod.id == panier_index.id_produit).map((prod) =>
             <div key={prod} >
-              <UnArticle id_produit={prod.id}  setPanier={setPanier} panier={panier} />
+              <CardProduitPanier id_produit={prod.id}  setPanier={setPanier} panier={panier} />
             </div>
           ))}
 
@@ -23,4 +23,4 @@ function PanierListe({ panier, setPanier, numberArticle, setNumberArticle }) {
   );
 }
 
-export default PanierListe;
+export default ListeDeProduit;

@@ -1,6 +1,7 @@
 import '../../styles/Panier/panier-totale.css'
 import React, { useEffect, useState } from "react";
 import { liste_produits } from '../liste-produit/array-liste-produit'
+import "../../styles/Panier/panier-form-bon-de-reduction.css"
 
 function calculeSommeTotale(panier) {
 
@@ -44,11 +45,11 @@ function PanierTotale({ panier, numberArticle, setNumberArticle }) {
                 </select>
             </div>
             <button  id="paiement-btn">PAIEMENT</button>
-            {/* <div>
-                NOUS ACCEPTIONS:
-            </div>
-            <div class="div-liste-carte"></div>
- */}
+            <div className="div-form-bon-de-reduction">
+            <input placeholder="Mon bon de réduction" />
+            <button>Ajouter</button>
+        </div>
+          
 
         </div>
 

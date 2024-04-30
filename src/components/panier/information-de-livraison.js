@@ -1,6 +1,6 @@
 import '../../styles/Panier/panier-info-livraison.css'
 
-function PanierInfoLivraison() {
+function InformationDeLivraison() {
     return (
 
         <>
@@ -24,4 +24,4 @@ function PanierInfoLivraison() {
     );
 }
 
-export default PanierInfoLivraison;
+export default InformationDeLivraison;

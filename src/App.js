@@ -1,5 +1,5 @@
 import Panier from './components/panier/index'
-import Produit from './components/produit/index'
+import PageProduit from './components/produit/index'
 import Nav from './components/nav'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ListeProduitHomme from './components/liste-produit/homme';
@@ -27,10 +27,10 @@ function App() {
         <Route path="/" element={< Nav />}>
           <Route index element={<Accueil />} />
           <Route path="panier" element={<Panier panier={panier} setPanier={setPanier}/>} />
-          <Route path="produit" element={<Produit panier={panier} addInPanier={addInPanier} />} />
+          <Route path="produit" element={<PageProduit panier={panier} addInPanier={addInPanier} />} />
           <Route path="femme" element={<ListeProduitFemme panier={panier}  addInPanier={addInPanier}/>} />
           <Route path="homme" element={<ListeProduitHomme panier={panier} addInPanier={addInPanier}/>} />
-          <Route path="search" element={<Search />} />
+          <Route path="search" element={<Search  panier={panier} addInPanier={addInPanier} />} />
           <Route path="connexion" element={<Connexion />} />
           <Route path="inscription" element={<Inscription />} />
         </Route>

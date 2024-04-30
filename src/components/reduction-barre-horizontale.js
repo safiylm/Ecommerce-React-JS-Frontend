@@ -1,4 +1,4 @@
-import '../../styles/barre-horizontale.css'
+import '../styles/barre-horizontale.css'
 
 function ReductionBarreHorizontale() {
   return (

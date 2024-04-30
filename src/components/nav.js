@@ -1,5 +1,6 @@
 import '../styles/nav.css'
 import { Outlet, Link } from "react-router-dom";
+import ReductionBarreHorizontale from './reduction-barre-horizontale.js'
 
 
 function displayNavFemme() {
@@ -63,8 +64,10 @@ const Nav = () => {
         <a href="/homme?ctg=Accessoires">Accessoires</a>
       </div>
 
+      <ReductionBarreHorizontale />
 
       <Outlet />
+
     </>
   )
 };
