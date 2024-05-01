@@ -3,7 +3,7 @@ import PanierTotale from './panier-totale.js'
 import {useState} from "react"
 
 
-function Panier({panier, setPanier, addInPanier}) {
+function Panier({panier, setPanier}) {
   
   const [numberArticle, setNumberArticle] = useState(1);
   return ( 
@@ -13,7 +13,7 @@ function Panier({panier, setPanier, addInPanier}) {
           <ListeDeProduit panier={panier} setPanier={setPanier} numberArticle={numberArticle} setNumberArticle={setNumberArticle}/>
         </div>
         <div className="right">
-          <PanierTotale  panier={panier} numberArticle={numberArticle} setNumberArticle={setNumberArticle} />
+          <PanierTotale panier={panier} numberArticle={numberArticle} setNumberArticle={setNumberArticle} />
 
 
         </div>

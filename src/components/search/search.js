@@ -45,8 +45,8 @@ class Search extends Component {
 
         <div className='d-flex flex-wrap align-items-center justify-content-center'>
           {liste_produits.filter(prod => prod.nom.includes( this.state.productSearch_) ).map((produit) =>
-            < ProduitCard prod={produit}   listeFavoris={listeFavoris}
-            setListeFavoris={setListeFavoris} />
+            < ProduitCard prod={produit}   listeFavoris={this.listeFavoris}
+            setListeFavoris={this.setListeFavoris} />
           )}
         </div>
 

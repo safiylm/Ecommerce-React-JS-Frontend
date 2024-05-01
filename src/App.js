@@ -20,8 +20,7 @@ function App() {
 
   const addInPanier = (newProduct) => { setPanier(prevArray => [...prevArray, { "id_produit": 2, "quantite": 1 }]) }
 
-  const removeInPanier = () => { }
-
+  
   return (
 
     <BrowserRouter>
@@ -29,7 +28,10 @@ function App() {
         <Route path="/" element={< Nav />}>
           <Route index element={<Accueil />} />
           <Route path="panier" element={<Panier panier={panier} setPanier={setPanier} />} />
-          <Route path="produit" element={<PageProduit panier={panier} addInPanier={addInPanier} listeFavoris={listeFavoris}
+          <Route path="produit" element={<PageProduit panier={panier} 
+          setPanier={setPanier}
+          addInPanier={addInPanier} 
+          listeFavoris={listeFavoris}
             setListeFavoris={setListeFavoris} />} />
           <Route path="femme" element={<ListeProduitFemme listeFavoris={listeFavoris}
             setListeFavoris={setListeFavoris} />} />
