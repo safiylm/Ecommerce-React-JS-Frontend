@@ -11,7 +11,7 @@ class Search extends Component {
     super(props);
 
     this.state = {
-      productSearch_: "Escarpins à talons hauts",
+      productSearch_: "_",
       attributSearch_: "nom",
 
     };
@@ -35,19 +35,39 @@ class Search extends Component {
         </div>
 
         
-        <div className='d-flex flex-wrap align-items-center justify-content-center'>
-          <button
-            onClick={() => this.setState({ attributSearch_: "nom" })}
-          >Nom</button>
-          <button onClick={() => this.setState({ attributSearch_: "marque" })} >Marque</button>
+        <div className='btn-search d-flex flex-wrap align-items-center justify-content-center'>
+        {this.state.attributSearch_ == "nom" ?
+          <button onClick={() => this.setState({ attributSearch_: "nom" })} style={{borderBottom : "2px solid black"}}>Nom</button>
+        :
+        <button onClick={() => this.setState({ attributSearch_: "nom" })}>Nom</button>
+        }
+        
+        {this.state.attributSearch_ == "marque"  ? 
+          <button onClick={() => this.setState({ attributSearch_: "marque" })} style={{borderBottom : "2px solid black"}}>Marque</button>
+        :  
+        <button onClick={() => this.setState({ attributSearch_: "marque" })} >Marque</button>
+      }
+
+
         </div >
 
 
         <div className='d-flex flex-wrap align-items-center justify-content-center'>
-          {liste_produits.filter(prod => prod.nom.includes( this.state.productSearch_) ).map((produit) =>
-            < ProduitCard prod={produit}   listeFavoris={this.listeFavoris}
-            setListeFavoris={this.setListeFavoris} />
-          )}
+         {this.state.attributSearch_ == "nom" &&
+          liste_produits.filter(prod => prod.nom.includes( this.state.productSearch_) ).map((produit) =>
+            < ProduitCard prod={produit}   listeFavoris={listeFavoris}
+            setListeFavoris={setListeFavoris} />
+          )
+
+        }
+
+{this.state.attributSearch_ == "marque" &&
+          liste_produits.filter(prod => prod.marque.includes( this.state.productSearch_) ).map((produit) =>
+            < ProduitCard prod={produit}   listeFavoris={listeFavoris}
+            setListeFavoris={setListeFavoris} />
+          )
+
+        }
         </div>
 
       </>

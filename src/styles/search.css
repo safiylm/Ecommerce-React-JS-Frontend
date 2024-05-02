@@ -1,5 +1,5 @@
 .div-search {
-    padding: 50px 20px;
+    padding: 50px 20px 15ps 20px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -18,4 +18,12 @@
 .search-input:focus-visible {
     border-bottom: 1.3px solid rgb(123, 107, 232);
     outline: none;
+}
+
+.btn-search button{
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+
 }
