@@ -317,6 +317,7 @@ export const liste_produits = [
 
 
         ],
+        "taille": ["FR38", "FR40", "FR42"],
         "prix": 29.99,
         "matiere_entretien": ["matiere_entretien"],
         "detail_produit": ["detail_produit"],
