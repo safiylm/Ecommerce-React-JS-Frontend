@@ -19,9 +19,7 @@ class Search extends Component {
 
 
   render() {
-  
-    const listeFavoris = this.props.listeFavoris;
-    const setListeFavoris = this.props.setListeFavoris;
+
 
 
     return (
@@ -34,40 +32,36 @@ class Search extends Component {
             onKeyUp={() => this.setState({ productSearch_: document.getElementById("inputProductSearch").value })} />
         </div>
 
-        
+
         <div className='btn-search d-flex flex-wrap align-items-center justify-content-center'>
-        {this.state.attributSearch_ == "nom" ?
-          <button onClick={() => this.setState({ attributSearch_: "nom" })} style={{borderBottom : "2px solid black"}}>Nom</button>
-        :
-        <button onClick={() => this.setState({ attributSearch_: "nom" })}>Nom</button>
-        }
-        
-        {this.state.attributSearch_ == "marque"  ? 
-          <button onClick={() => this.setState({ attributSearch_: "marque" })} style={{borderBottom : "2px solid black"}}>Marque</button>
-        :  
-        <button onClick={() => this.setState({ attributSearch_: "marque" })} >Marque</button>
-      }
+          {this.state.attributSearch_ == "nom" ?
+            <button onClick={() => this.setState({ attributSearch_: "nom" })} style={{ borderBottom: "2px solid black" }}>Nom</button>
+            :
+            <button onClick={() => this.setState({ attributSearch_: "nom" })}>Nom</button>
+          }
+
+          {this.state.attributSearch_ == "marque" ?
+            <button onClick={() => this.setState({ attributSearch_: "marque" })} style={{ borderBottom: "2px solid black" }}>Marque</button>
+            :
+            <button onClick={() => this.setState({ attributSearch_: "marque" })} >Marque</button>
+          }
 
 
         </div >
 
 
         <div className='d-flex flex-wrap align-items-center justify-content-center'>
-         {this.state.attributSearch_ == "nom" &&
-          liste_produits.filter(prod => prod.nom.includes( this.state.productSearch_) ).map((produit) =>
-            < ProduitCard prod={produit}   listeFavoris={listeFavoris}
-            setListeFavoris={setListeFavoris} />
-          )
+          {this.state.attributSearch_ == "nom" &&
+            liste_produits.filter(prod => prod.nom.toLowerCase().includes(this.state.productSearch_.toLowerCase())).map((produit) =>
+              < ProduitCard produit={produit} />
+            )
+          }
 
-        }
-
-{this.state.attributSearch_ == "marque" &&
-          liste_produits.filter(prod => prod.marque.includes( this.state.productSearch_) ).map((produit) =>
-            < ProduitCard prod={produit}   listeFavoris={listeFavoris}
-            setListeFavoris={setListeFavoris} />
-          )
-
-        }
+          {this.state.attributSearch_ == "marque" &&
+            liste_produits.filter(prod => prod.marque.toLowerCase().includes(this.state.productSearch_.toLowerCase())).map((produit) =>
+              < ProduitCard produit={produit} />
+            )
+          }
         </div>
 
       </>
