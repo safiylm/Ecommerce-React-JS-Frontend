@@ -2,21 +2,21 @@ import '../../styles/Panier/liste.css'
 import CardProduitPanier from './card-article'
 import { liste_produits } from '../liste-produit/array-liste-produit'
 
-function ListeDeProduit({ panier, setPanier, numberArticle, setNumberArticle }) {
+function ListeDeProduit({   numberArticle, setNumberArticle }) {
 
 
   return (
     <div className="div-mon-panier">
-      <h4>
+      <h1>
         MON PANIER
-      </h4>
-      {panier.length <= 0 ? <p>Panier vide </p> :
+      </h1>
+      {JSON.parse(localStorage.getItem('panier')).length <= 0 ? <p>Panier vide </p> :
 
-        panier.map((panier_index) =>
-          liste_produits.filter(prod => prod.id == panier_index.id_produit).map((prod) =>
-          
-              <CardProduitPanier id_produit={prod.id}  setPanier={setPanier} panier={panier} />
-          
+        JSON.parse(localStorage.getItem('panier')).map((panier_index) =>
+          liste_produits.filter(prod => prod.id == panier_index.produitId).map((prod) =>
+
+            <CardProduitPanier produitId={prod.id}/>
+
           ))}
 
     </div>

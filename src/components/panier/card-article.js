@@ -5,21 +5,21 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 
 
 
-function CardProduitPanier({ id_produit,setPanier, panier }) {
+function CardProduitPanier({ produitId }) {
 
 
 
-    // This function change quantity of product in panier 
+    // This function change quantity of product in panier
     const ChangeQuantite = (nb) => {
 
-        let updatedUser = { "id_produit": id_produit, "quantite": nb }
+        let updatedUser = { "produitId": produitId, "quantite": nb }
 
-        const updatedObject = panier.map((p) =>
-            p.id_produit == id_produit ? updatedUser : p
+        const updatedObject =  JSON.parse(localStorage.getItem('panier')).map((p) =>
+            p.produitId == produitId ? updatedUser : p
         );
         console.log(updatedObject)
         // update the users state with the updated user
-        setPanier(updatedObject);
+     //   setPanier(updatedObject);
     }
 
 
@@ -28,7 +28,7 @@ function CardProduitPanier({ id_produit,setPanier, panier }) {
     return (
         <>
             {
-                liste_produits.filter(prod => prod.id == id_produit).map((prod) =>
+                liste_produits.filter(prod => prod.id == produitId).map((prod) =>
 
                     <div className='div-un-article' key={prod.id} >
                         <img src={prod.image_url[0]} alt="produit" />
