@@ -13,10 +13,7 @@ import ListeFavoris from './components/favoris/index'
 
 function App() {
 
-  let panier = [{ "produitId": 16, "quantite": 1 },
-  { "produitId": 10, "quantite": 1 },
-  { "produitId": 15, "quantite": 1 }];
-
+  let panier = [];
   if(JSON.parse(localStorage.getItem("panier")).length <= 0)
     localStorage.setItem('panier', JSON.stringify(panier));
 
