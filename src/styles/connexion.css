@@ -10,11 +10,10 @@
     justify-content: center;
     width: fit-content;
     height: auto;
-    border-radius: 20px;
     margin-right:auto;
     margin-left: auto;
     padding: 50px;
-    box-shadow: 10px 10px 14px 14px #cecece;
+    box-shadow: 10px 10px 14px 14px #ebe9e9;
 }
 
 #div-connexion form * {
@@ -22,12 +21,9 @@
 }
 
 #div-connexion form input {
-    padding: 12px 0;
-    font-size: 14px;
+   
+    font-size: 15.5px;
     outline: none;
-    border: none;
-
-    border-bottom:0.4px solid green;
     width: 350px;
 }
 
@@ -35,8 +31,7 @@
     margin-top: 30px;
     margin-bottom: 5px;
     color: rgb(40, 40, 40);
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 15.5px;
 }
 
 
@@ -47,20 +42,21 @@
       background-color: rgb(94, 149, 127);
     color:white;
     font-size: 15.5px;
-      padding: 11px 15px;
+      padding: 9px 18px;
     border-radius: 5px;
 }
 
 #go_page_inscription{
     color: rgb(94, 149, 127);
     text-decoration: none;
-    padding : 9px 15px;
+    padding : 9px 18px;
     border: 1px solid rgb(94, 149, 127);
     border-radius: 5px;
     text-align: center;
     width: min-content;
     margin: 10px auto;
     font-size: 15px;
+    font-weight: 900;
 
 }
 
