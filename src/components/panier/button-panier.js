@@ -14,24 +14,17 @@ function ButtonPanier({ produitId, produitQuantite }) {
         })
         localStorage.setItem('panier', JSON.stringify(panier))
         setIsInPanier(!isInPanier)
-        console.log(functionIsInPanier)
-
     }
 
     const removePanier = () => {
         let panier = JSON.parse(localStorage.getItem('panier'))
-        panier.filter((a) =>
+        panier = panier.filter((a) =>
             a.produitId !== produitId
         )
         localStorage.setItem('panier', JSON.stringify(panier))
         setIsInPanier(!isInPanier)
-        console.log( panier)
-
     }
 
-
-
-    // const addInPanier = (newProduct) => { setPanier(prevArray => [...prevArray, { "id_produit": 2, "quantite": 1 }]) }
 
     return (
         <>
