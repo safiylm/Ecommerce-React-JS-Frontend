@@ -19,6 +19,10 @@ nav {
   border-bottom: 0.3px solid gray;
   background:white;
 
+  svg{
+    margin-right:5px ;
+  }
+
 }
 
 @media (max-width: 900px){
