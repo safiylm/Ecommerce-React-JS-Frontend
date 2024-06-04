@@ -12,13 +12,15 @@ import React from "react";
 import ListeFavoris from './components/favoris/index'
 
 function App() {
+  
+  //localStorage.clear();
 
   let panier = [];
-  if(JSON.parse(localStorage.getItem("panier")).length <= 0)
+  if(localStorage.getItem("panier") ==null)
     localStorage.setItem('panier', JSON.stringify(panier));
 
   let fav = []
-  if(JSON.parse(localStorage.getItem("favoris")).length <= 0)
+  if(localStorage.getItem("favoris")==null )
   localStorage.setItem('favoris', JSON.stringify(fav));
 
 
