@@ -3,7 +3,7 @@ import { liste_produits } from './array-liste-produit'
 import ProduitCard from '../produit/card'
 
 
-function ListeProduitFemme({   }) {
+function ListeProduitFemme() {
     const queryParameters = new URLSearchParams(window.location.search)
     const categorie = queryParameters.get("ctg")
 
@@ -11,11 +11,11 @@ function ListeProduitFemme({   }) {
         <div className="div-liste-produits">
             {(categorie != null) ?
 
-                liste_produits.filter(prod => prod.categorie[0] == categorie).filter(prod => prod.sexe == "Femme").map((produit) =>
+                liste_produits.filter(prod => prod.categorie[0] === categorie).filter(prod => prod.sexe === "Femme").map((produit) =>
                     < ProduitCard produit={produit} />
                 )
                 :
-                liste_produits.filter(prod => prod.sexe == "Femme").map((produit) =>
+                liste_produits.filter(prod => prod.sexe === "Femme").map((produit) =>
                     < ProduitCard produit={produit} />
                 )
 

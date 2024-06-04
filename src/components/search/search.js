@@ -34,13 +34,13 @@ class Search extends Component {
 
 
         <div className='btn-search d-flex flex-wrap align-items-center justify-content-center'>
-          {this.state.attributSearch_ == "nom" ?
+          {this.state.attributSearch_ === "nom" ?
             <button onClick={() => this.setState({ attributSearch_: "nom" })} style={{ borderBottom: "2px solid black" }}>Nom</button>
             :
             <button onClick={() => this.setState({ attributSearch_: "nom" })}>Nom</button>
           }
 
-          {this.state.attributSearch_ == "marque" ?
+          {this.state.attributSearch_ === "marque" ?
             <button onClick={() => this.setState({ attributSearch_: "marque" })} style={{ borderBottom: "2px solid black" }}>Marque</button>
             :
             <button onClick={() => this.setState({ attributSearch_: "marque" })} >Marque</button>
@@ -51,13 +51,13 @@ class Search extends Component {
 
 
         <div className='d-flex flex-wrap align-items-center justify-content-center'>
-          {this.state.attributSearch_ == "nom" &&
+          {this.state.attributSearch_ === "nom" &&
             liste_produits.filter(prod => prod.nom.toLowerCase().includes(this.state.productSearch_.toLowerCase())).map((produit) =>
               < ProduitCard produit={produit} />
             )
           }
 
-          {this.state.attributSearch_ == "marque" &&
+          {this.state.attributSearch_ === "marque" &&
             liste_produits.filter(prod => prod.marque.toLowerCase().includes(this.state.productSearch_.toLowerCase())).map((produit) =>
               < ProduitCard produit={produit} />
             )

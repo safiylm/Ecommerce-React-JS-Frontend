@@ -1,5 +1,4 @@
 import '../../styles/Panier/totale.css'
-import React, { useEffect, useState } from "react";
 import { liste_produits } from '../liste-produit/array-liste-produit'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InformationDeLivraison from './information-de-livraison.js'
@@ -8,12 +7,10 @@ function calculeSommeTotale(panier) {
 
     let t = 0;
     JSON.parse(localStorage.getItem('panier')).map((panier_index) =>
-        liste_produits.filter(prod => prod.id == panier_index.produitId).map((prod) =>
+        liste_produits.filter(prod => prod.id === panier_index.produitId).map((prod) =>
             t = t + prod.prix * panier_index.quantite
         )
     )
-
-
     return t;
 }
 
@@ -27,24 +24,15 @@ function PanierTotale({  numberArticle, setNumberArticle }) {
             {JSON.parse(localStorage.getItem('panier')).length <= 0 ? <div> 0.00 € </div> :
 
                 JSON.parse(localStorage.getItem('panier')).map((panier_index) =>
-                    liste_produits.filter(prod => prod.id == panier_index.produitId).map((prod) =>
+                    liste_produits.filter(prod => prod.id === panier_index.produitId).map((prod) =>
                         <p> {prod.nom}     -    <strong> {panier_index.quantite} * {(Math.round(prod.prix * 100) / 100).toFixed(2)} </strong> </p>
                     ))
             }
 
             <div style={{ "font-size": "20.5px" }}>  TOTAL : <strong>{(Math.round(sommeTotal * 100) / 100).toFixed(2)} € </strong></div>
-
-
-
             <button id="paiement-btn">PAIEMENT</button>
             <InformationDeLivraison />
-
-
         </div>
-
-
-
-
     );
 }
 

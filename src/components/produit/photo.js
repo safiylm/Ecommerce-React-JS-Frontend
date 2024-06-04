@@ -6,7 +6,7 @@ function ClickImage(e){
     document.getElementById("photoViewer").src=e;
 }
 
-function PhotosProduit({liste_photos}) {
+function PhotosProduit({liste_photos, nomproduit}) {
    
     return (
 
@@ -14,12 +14,12 @@ function PhotosProduit({liste_photos}) {
             <div className='listePhotoVertical'>
 
                 {liste_photos.map((url, index) => (
-                    <img key={`${url}-${index}`} src={url} onClick={() => ClickImage(url)} ></img>
+                    <img key={`${url}-${index}`} src={url} onClick={() => ClickImage(url)} alt={nomproduit + " "+ index} />
                 ))}
             </div>
 
             <div>
-                <img id="photoViewer" src={liste_photos[0]} />
+                <img id="photoViewer" src={liste_photos[0]} alt={nomproduit}/>
             </div>
         </div>
     );

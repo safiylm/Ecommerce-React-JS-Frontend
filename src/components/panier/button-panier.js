@@ -3,7 +3,7 @@ import { useState } from "react"
 
 function ButtonPanier({ produitId, produitQuantite }) {
 
-    const functionIsInPanier = JSON.parse(localStorage.getItem('panier')).filter((f) => f.produitId == produitId).length > 0;
+    const functionIsInPanier = JSON.parse(localStorage.getItem('panier')).filter((f) => f.produitId === produitId).length > 0;
     const [isInPanier, setIsInPanier] = useState(functionIsInPanier);
 
     const addPanier = () => {

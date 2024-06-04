@@ -3,7 +3,7 @@ import PanierTotale from './panier-totale.js'
 import {useState} from "react"
 
 
-function Panier({ }) {
+function Panier() {
   
   const [numberArticle, setNumberArticle] = useState(1);
   return ( 

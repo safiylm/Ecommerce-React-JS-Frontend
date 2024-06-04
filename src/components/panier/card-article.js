@@ -1,5 +1,5 @@
 import '../../styles/Panier/produit.css'
-import { Outlet, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { liste_produits } from '../liste-produit/array-liste-produit'
 
 
@@ -15,7 +15,7 @@ function CardProduitPanier({ produitId }) {
         let updatedUser = { "produitId": produitId, "quantite": nb }
 
         const updatedObject =  JSON.parse(localStorage.getItem('panier')).map((p) =>
-            p.produitId == produitId ? updatedUser : p
+            p.produitId === produitId ? updatedUser : p
         );
         console.log(updatedObject)
         // update the users state with the updated user
@@ -28,7 +28,7 @@ function CardProduitPanier({ produitId }) {
     return (
         <>
             {
-                liste_produits.filter(prod => prod.id == produitId).map((prod) =>
+                liste_produits.filter(prod => prod.id === produitId).map((prod) =>
 
                     <div className='div-un-article' key={prod.id} >
                         <img src={prod.image_url[0]} alt="produit" />

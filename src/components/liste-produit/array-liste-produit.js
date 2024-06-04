@@ -417,6 +417,5 @@ export const liste_produits = [
 ];
 
 
-export default {
-    liste_produits,
-}
+export default
+    liste_produits

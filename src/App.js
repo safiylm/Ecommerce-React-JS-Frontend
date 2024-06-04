@@ -8,7 +8,7 @@ import Search from './components/search/search';
 import Connexion from './components/auth/connexion';
 import Accueil from './components/accueil';
 import Inscription from './components/auth/inscription';
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ListeFavoris from './components/favoris/index'
 
 function App() {
