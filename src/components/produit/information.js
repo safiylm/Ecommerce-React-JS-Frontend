@@ -1,5 +1,4 @@
-import '../../styles/Produit/info-produit.css'
-import InformationDeLivraison from '../panier/information-de-livraison'
+import '../../styles/Produit/information.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import ButtonFavoris from '../favoris/button-favoris'
 import ButtonPanier from '../panier/button-panier'
@@ -7,75 +6,32 @@ import ButtonPanier from '../panier/button-panier'
 function InformationsProduit({ produit }) {
 
   return (
-    <div class="divInfo-container">
-      <div className='div-info-produit'>
-        <h1 className='titreProduit'>{produit.nom}</h1>
-        <h2 className='prix'>{produit.prix} € </h2>
-        <p className='couleur'> Couleur : {produit.couleur} </p>
+    <div className="produit-information-container">
 
-        <div className="div-taille">
-          <select>
-            {produit.taille.map((t) => (
-              <option>{t}</option>
-            ))}
-          </select>
-        </div>
+      <h1 className='titreProduit'>{produit.nom}</h1>
+      <h2 className='prix'>{produit.prix} € </h2>
+      <p className='couleur'> Couleur : {produit.couleur} </p>
 
-        <div className='div-add-panier-herat'>
-          <ButtonPanier produitId={produit.id}  produitQuantite={produit.quantite} />
-          <ButtonFavoris produitId={produit.id} />
-        </div>
-
+      <div className="taille">
+        <select>
+          {produit.taille.map((t) => (
+            <option>{t}</option>
+          ))}
+        </select>
       </div>
 
-      <InformationDeLivraison />
-
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Matière et entretien
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              {produit.matiere_entretien.map((t) => (
-                <p>{t}</p>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Détails du produit
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              {produit.detail_produit.map((t) => (
-                <p>{t}</p>
-              ))}
-
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Taille & coupe
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              {produit.taille_coupe.map((t) => (
-                <p>{t}</p>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className='panier-like'>
+        <ButtonPanier produitId={produit.id} produitQuantite={produit.quantite} />
+        <ButtonFavoris produitId={produit.id} />
       </div>
 
+      <br />
+      <section className='descriptionproduit'>
+        <h2>Description du produit</h2>
+        <div>Les escarpins à talons hauts sont des chaussures élégantes et sophistiquées, conçues pour allonger la silhouette et ajouter une touche de glamour à n'importe quelle tenue. Ils se caractérisent par une coupe décolletée qui expose le cou-de-pied, un talon fin qui peut varier en hauteur, souvent mesuré à partir de 7 centimètres ou plus, et une pointe qui peut être soit arrondie, soit pointue pour un effet plus audacieux. Fabriqués dans une variété de matériaux comme le cuir, le daim, le satin ou le vernis, ces escarpins sont souvent disponibles dans des couleurs classiques comme le noir, le nude ou le rouge, mais aussi dans des motifs ou des textures plus audacieuses pour des looks distinctifs. Parfaits pour les occasions formelles, les soirées, ou même pour donner une allure chic à une tenue de travail, ils sont l'incarnation du style et du raffinement.</div>
+        <br /><br />
+
+      </section >
     </div >
   );
 }

@@ -3,15 +3,15 @@ import '../../styles/Produit/photos.css'
 
 function ClickImage(e){
    // alert(e)
-    document.getElementById("photoViewer").src=e;
+    document.getElementById("photo-viewer").src=e;
 }
 
 function PhotosProduit({liste_photos, nomproduit}) {
    
     return (
 
-        <div className='divPhotos'>
-            <div className='listePhotoVertical'>
+        <div className='produit-photos-container'>
+            <div className='liste-photo_vertical'>
 
                 {liste_photos.map((url, index) => (
                     <img key={`${url}-${index}`} src={url} onClick={() => ClickImage(url)} alt={nomproduit + " "+ index} />
@@ -19,7 +19,7 @@ function PhotosProduit({liste_photos, nomproduit}) {
             </div>
 
             <div>
-                <img id="photoViewer" src={liste_photos[0]} alt={nomproduit}/>
+                <img id="photo-viewer" src={liste_photos[0]} alt={nomproduit}/>
             </div>
         </div>
     );
