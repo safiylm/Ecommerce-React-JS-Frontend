@@ -1,6 +1,7 @@
 import '../../styles/Panier/liste.css'
 import CardProduitPanier from './card-article'
 import { liste_produits } from '../liste-produit/array-liste-produit'
+import InformationDeLivraison from './information-de-livraison.js'
 
 function ListeDeProduit({   numberArticle, setNumberArticle }) {
 
@@ -18,6 +19,8 @@ function ListeDeProduit({   numberArticle, setNumberArticle }) {
             <CardProduitPanier produitId={prod.id}/>
 
           ))}
+            
+            <InformationDeLivraison />
 
     </div>
   );

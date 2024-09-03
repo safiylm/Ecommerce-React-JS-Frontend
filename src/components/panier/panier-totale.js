@@ -1,7 +1,6 @@
 import '../../styles/Panier/totale.css'
 import { liste_produits } from '../liste-produit/array-liste-produit'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import InformationDeLivraison from './information-de-livraison.js'
 
 function calculeSommeTotale(panier) {
 
@@ -31,7 +30,6 @@ function PanierTotale({  numberArticle, setNumberArticle }) {
 
             <div style={{ "font-size": "20.5px" }}>  TOTAL : <strong>{(Math.round(sommeTotal * 100) / 100).toFixed(2)} € </strong></div>
             <button id="paiement-btn">PAIEMENT</button>
-            <InformationDeLivraison />
         </div>
     );
 }

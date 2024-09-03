@@ -1,19 +1,13 @@
-
 .div-info-livraison-1, .div-info-livraison-2{
-
     font-weight: 100;
     font-size: 13px;
     background-color: white;
-   
-    padding: 10px 30px;
     margin: 0;
-    width: 400px;
 }
 
 .div-info-livraison-1{
     background-color: black !important;
-    color:white;
-  
+    color:white; 
 }
 
 @media screen and (max-width: 1000px) {
@@ -29,6 +23,36 @@
         width: 85vw;
 
     }
+}
+
+.div-info-livraison-1,
+.div-info-livraison-2 {
+    margin: 5px 0;
+    border: 0.2px solid black;
+    padding : 15px;
+    max-width: 80vw;
+    margin: 10px auto;
+}
 
 
+.div-info-produit,
+.div-info-produit * {
+    margin: 5px 0 !important;
+    padding: 0;
+}
+
+.div-info-produit,
+.div-info-livraison-1,
+.div-info-livraison-2,
+.div-matiere-container {
+    margin: 10px auto;
+}
+
+
+
+.div-info-livraison-1,
+.div-info-livraison-2 {
+    width: 95vw;
+    margin: 8px auto !important;
+    padding : 15px;
 }
