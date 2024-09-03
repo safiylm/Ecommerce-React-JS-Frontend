@@ -21,8 +21,6 @@ function hideNavHomme() {
   document.getElementById("nav-homme-supplementaire").style.display = 'none'
 }
 
-
-
 const Nav = () => {
 
   return (
