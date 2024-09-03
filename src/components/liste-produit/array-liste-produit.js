@@ -15,6 +15,7 @@ export const liste_produits = [
             "https://img01.ztat.net/article/spp-media-p1/6d35b28fba2842aaa280ac4a3a72e1ad/eff8309e8ed94bfb87551234b3326c98.jpg",
             "https://img01.ztat.net/article/spp-media-p1/a0344a6f24ed4943bbac54d07e669947/c275e18fdc7448748ed14cc8c653b090.jpg"
         ],
+        "description":"Les escarpins à talons hauts sont des chaussures élégantes et sophistiquées, conçues pour allonger la silhouette et ajouter une touche de glamour à n'importe quelle tenue. Ils se caractérisent par une coupe décolletée qui expose le cou-de-pied, un talon fin qui peut varier en hauteur, souvent mesuré à partir de 7 centimètres ou plus, et une pointe qui peut être soit arrondie, soit pointue pour un effet plus audacieux. Fabriqués dans une variété de matériaux comme le cuir, le daim, le satin ou le vernis, ces escarpins sont souvent disponibles dans des couleurs classiques comme le noir, le nude ou le rouge, mais aussi dans des motifs ou des textures plus audacieuses pour des looks distinctifs. Parfaits pour les occasions formelles, les soirées, ou même pour donner une allure chic à une tenue de travail, ils sont l'incarnation du style et du raffinement.",
         "taille": ["FR37", "FR38", "FR39", "FR40", "FR41"],
         "prix": 49.00,
         "matiere_entretien" : ["Dessus / Tige:   Polyuréthane", "Doublure: Imitation cuir / textile", "Semelle de propreté: Synthétique", "Semelle d'usure: Matière synthétique", "Épaisseur de la doublure: Non doublé", "Matière: Cuir synthétique"],
