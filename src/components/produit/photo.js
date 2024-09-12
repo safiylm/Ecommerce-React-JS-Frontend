@@ -21,6 +21,10 @@ function PhotosProduit({liste_photos, nomproduit}) {
             <div>
                 <img id="photo-viewer" src={liste_photos[0]} alt={nomproduit}/>
             </div>
+
+            <div>
+                
+            </div>
         </div>
     );
 }
