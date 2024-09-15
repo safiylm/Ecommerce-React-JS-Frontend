@@ -1,0 +1,26 @@
+.commentaire-container{
+    width: 80vw;
+    margin: 20px auto;
+    padding: 50px 10px;
+}
+
+.un-commentaire{
+    margin: 20px 0;
+}
+.un-commentaire svg {
+    margin: 15px;
+}
+
+.commentaire-container form{
+    margin: 30px 0;
+}
+
+.commentaire-container form textarea{
+    height: 120px;
+    margin: 15px 0;
+}
+
+.commentaire-container form button[type="button"]{
+    margin: 20px auto;
+    display: block;
+}

@@ -4,7 +4,7 @@ import { liste_produits } from '../liste-produit/array-liste-produit'
 import PhotosProduit from "./photo";
 import ProduitCard from "./card"
 import InformationDeLivraison from '../panier/information-de-livraison'
-
+import Commentaire from './commentaire'
 function PageProduit({ setPanier }) {
 
   const queryParameters = new URLSearchParams(window.location.search)
@@ -60,6 +60,8 @@ function PageProduit({ setPanier }) {
       
       <br />
       <InformationDeLivraison />
+
+      <Commentaire produit={produit}/>
     </>
   );
 }
