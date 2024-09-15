@@ -24,3 +24,12 @@
     margin: 20px auto;
     display: block;
 }
+
+@media(max-width:800px){
+    .commentaire-container{
+        width: 95vw;
+        margin: 10px auto;
+        padding: 30px 5px;
+    }
+
+}
